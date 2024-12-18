@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
         navLinks.innerHTML = `
             <a href="#" id="logout">Log Off</a>
             <a href="collection.html">My Collection</a>
+            <a href="table-view.html">Table View</a>
         `;
 
         // Handle Log Off
