@@ -1,3 +1,4 @@
+//allows use of express and provides path through the directory
 const express = require('express');
 const path = require('path');
 const app = express();

@@ -1,3 +1,4 @@
+//when the user id logged in the additional options in navbar show
 document.addEventListener('DOMContentLoaded', () => {
     const navLinks = document.getElementById('nav-links');
     const userId = localStorage.getItem('userId'); // Check if user is logged in

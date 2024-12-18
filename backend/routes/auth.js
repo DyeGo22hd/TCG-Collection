@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const { signupUser, loginUser } = require('../controllers/authController');
 
+//allows to sign up or login
 router.post('/signup', signupUser);
 router.post('/login', loginUser);
 

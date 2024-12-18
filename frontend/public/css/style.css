@@ -167,6 +167,7 @@ form {
     width: 100%;
 }
 
+/*form container*/
 .form-container h2 {
     margin-bottom: 20px;
     color: #333;
@@ -338,6 +339,7 @@ form {
     margin-top: 20px;
 }
 
+/*cards formating*/
 .card {
     position: relative;
     background: #fff;

@@ -1,3 +1,5 @@
+
+//This handles the fetching the data from the database and helps present them
 document.addEventListener('DOMContentLoaded', async () => {
     try {
         // Fetch User_Data table
@@ -5,7 +7,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         const userData = await userResponse.json();
         console.log('User Data:', userData); // Debug: Check if data is fetched
         const userBody = document.getElementById('user-data-body');
-
+        //id, email, password
         userData.forEach(row => {
             const tr = document.createElement('tr');
             tr.innerHTML = `
@@ -21,7 +23,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         const collectionData = await collectionResponse.json();
         console.log('Collection Data:', collectionData); // Debug: Check if data is fetched
         const collectionBody = document.getElementById('collection-data-body');
-
+        //id, user id, card id, card name, and card image
         collectionData.forEach(row => {
             const tr = document.createElement('tr');
             tr.innerHTML = `

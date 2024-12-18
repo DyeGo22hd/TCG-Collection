@@ -1,3 +1,4 @@
+//allows to go to login page
 function redirectToLogin() {
     window.location.href = "login.html";
 }
@@ -9,7 +10,7 @@ function searchCards() {
         window.location.href = `/search.html?query=${encodeURIComponent(query)}`;
     }
 }
-
+//helps with the search bar and put out result
 document.addEventListener('DOMContentLoaded', () => {
     const urlParams = new URLSearchParams(window.location.search);
     const query = urlParams.get('query');

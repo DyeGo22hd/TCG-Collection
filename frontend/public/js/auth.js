@@ -5,12 +5,12 @@ async function handleSignup(event) {
     const email = document.getElementById('signup-email').value.trim();
     const password = document.getElementById('signup-password').value.trim();
 
-    if (!email || !password) {
+    if (!email || !password) { //of not valid email or password
         alert('Please enter a valid email and password.');
         return;
     }
 
-    try {
+    try { //converts into json string
         const response = await fetch('/api/auth/signup', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -18,7 +18,7 @@ async function handleSignup(event) {
         });
 
         const data = await response.json();
-
+        //determines if good combo or formating
         if (response.ok) {
             alert('Account created successfully! Please log in.');
             document.getElementById('signup-form').reset();
@@ -38,7 +38,7 @@ async function handleLogin(event) {
     const email = document.getElementById('login-email').value.trim();
     const password = document.getElementById('login-password').value.trim();
 
-    try {
+    try { //converts to json string
         const response = await fetch('/api/auth/login', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },

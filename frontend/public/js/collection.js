@@ -1,42 +1,9 @@
-document.addEventListener('DOMContentLoaded', async () => {
-    const userId = localStorage.getItem('userId');
 
-    if (!userId) {
-        alert('You must be logged in to view your collection.');
-        window.location.href = 'login.html';
-        return;
-    }
-
-    try {
-        const response = await fetch(`/api/collection/${userId}`);
-        const cards = await response.json();
-
-        const container = document.getElementById('collection-results');
-        container.innerHTML = ''; // Clear previous results
-
-        if (cards.length === 0) {
-            container.innerHTML = '<p>Your collection is empty.</p>';
-            return;
-        }
-
-        cards.forEach(card => {
-            const cardDiv = document.createElement('div');
-            cardDiv.className = 'card';
-            cardDiv.innerHTML = `
-                <img src="${card.card_image}" alt="${card.card_name}" class="card-image" />
-                <p>${card.card_name}</p>
-            `;
-            container.appendChild(cardDiv);
-        });
-    } catch (error) {
-        console.error('Error fetching collection:', error.message);
-        alert('Failed to load your collection.');
-    }
-});
+//allows for getting the user collection from the database and outputs them
 document.addEventListener('DOMContentLoaded', async () => {
     const userId = localStorage.getItem('userId');
     const collectionContainer = document.getElementById('collection-results');
-
+    //sees if the user is logged in if not go to the login page
     if (!userId) {
         alert('Please log in to view your collection.');
         window.location.href = 'login.html';
@@ -61,7 +28,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             collectionContainer.appendChild(cardElement);
         });
 
-        // Add Remove Card functionality
+        // Add Remove Card functionality from the collection and DB
         document.querySelectorAll('.remove-btn').forEach(button => {
             button.addEventListener('click', async (e) => {
                 const cardId = e.target.getAttribute('data-card-id');

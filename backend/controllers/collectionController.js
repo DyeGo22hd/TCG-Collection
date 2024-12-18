@@ -2,7 +2,7 @@ const pool = require('../db');
 
 // Add Card to Collection
 const addCardToCollection = async (req, res) => {
-    const { userId, cardId, cardName, cardImage } = req.body;
+    const { userId, cardId, cardName, cardImage } = req.body; 
 
     if (!userId || !cardId || !cardName || !cardImage) {
         return res.status(400).json({ error: 'All fields are required.' });
@@ -25,7 +25,7 @@ const addCardToCollection = async (req, res) => {
 
 // Get User's Collection
 const getUserCollection = async (req, res) => {
-    const { userId } = req.params;
+    const { userId } = req.params; 
 
     try {
         const result = await pool.query(
