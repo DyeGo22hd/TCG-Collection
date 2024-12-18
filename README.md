@@ -9,3 +9,21 @@ Javascript - for both front end and backend
 ## Link to Api
 https://tcgdex.dev/
 
+## Working features as of December 18, 2024
+- Login/Sign Up: Users can make or login to an existing account.
+- Search Bar: At the moment can only search set names not specific card names, type, rarity etc. 
+- Add/Remove Card: Can add cards to user collection or remove cards.
+- Database: SQL and has 2 tables one for User_Data and one for Collection (can change the conneciton to other hosting services if needed)
+
+## Needs Attention/ More Work
+- Other promised search filters
+- Beign able to share collection
+- Allow to prioritize/favorite cards
+- Connect card with real-time card price (need to look for api for this)
+- See other hosting services
+
+## How to run
+- Make sure you all modules installed and proper packages
+- Make sure you have Node.js and sxpress
+- cd to backend folder
+- run by either: "npm start" or "npm run dev"
