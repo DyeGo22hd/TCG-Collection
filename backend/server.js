@@ -22,6 +22,9 @@ app.use('/api', apiRoutes); // Register API routes here
 app.use('/api/auth', authRoutes);
 app.use('/api/collection', collectionRoutes);
 
+const tableRoutes = require('./routes/table'); // Import table routes
+app.use('/api/table', tableRoutes); // Add route
+
 // Start server
 const PORT = 3000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
