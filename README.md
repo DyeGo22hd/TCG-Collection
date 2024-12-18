@@ -22,8 +22,17 @@ https://tcgdex.dev/
 - Connect card with real-time card price (need to look for api for this)
 - See other hosting services
 
+## Database
+The website is hard coded with these database info, so when recreating the DB make sure to either change this in the code or make it the same as bellow
+- user: 'postgres',
+- host: 'localhost',
+- database: 'tcg_collection',
+- password: 'webdev',
+- port: 5432,
+
 ## How to run
 - Make sure you have all modules installed and proper packages
 - Make sure you have Node.js and express
 - cd to backend folder
 - run by either: "npm start" or "npm run dev"
+
