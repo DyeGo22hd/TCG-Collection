@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - TCG Collection</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+    <script src="js/navbar.js" defer></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <a href="index.html" class="logo">TCG Collection</a>
+        <div id="nav-links">
+            <a href="login.html">Login / Sign Up</a>
+        </div>
+    </div>
+    
+
+    <!-- Hero Section with Background Image -->
+    <div class="hero">
+        <div class="content">
+            <h1>Welcome to TCG Collection</h1>
+            <form onsubmit="searchCards(); return false;">
+                <input type="text" id="search-bar" placeholder="Search for sets..." />
+                <button type="submit" class="btn">Search</button>
+            </form>
+        </div>
+    </div>
+
+    <button onclick="localStorage.clear(); alert('Local storage cleared!'); window.location.reload();">
+        Clear Local Storage
+    </button>
+    
+</body>
+</html>
