@@ -36,3 +36,9 @@ The website is hard coded with these database info, so when recreating the DB ma
 - cd to backend folder
 - run by either: "npm start" or "npm run dev"
 - go to browser and go to "http://localhost:3000/"
+- login/sign up through navbar option
+- on home use the search bar to search up specific PTCG sets ie "Base Set", "Evolving Skies", "Jungle", "Steam Siege", etc.
+- add cards to collection and view cards in My Collection
+- can see your collection or remove cards from it
+- Table view will show you the tables in the database: User_Data and Collection
+
