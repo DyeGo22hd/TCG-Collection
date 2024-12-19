@@ -31,8 +31,8 @@ The website is hard coded with these database info, so when recreating the DB ma
 - port: 5432,
 
 ## How to run
-- Make sure you have all modules installed and proper packages
-- Make sure you have Node.js and express
+- make sure you have all modules installed and proper packages
+- make sure you have Node.js and express
 - cd to backend folder
 - run by either: "npm start" or "npm run dev"
-
+- go to browser and go to "http://localhost:3000/"
