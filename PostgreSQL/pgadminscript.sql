@@ -1,7 +1,6 @@
 -- Database: tcg_collection
 
 -- DROP DATABASE IF EXISTS tcg_collection;
-
 CREATE DATABASE tcg_collection
     WITH
     OWNER = postgres
@@ -13,12 +12,16 @@ CREATE DATABASE tcg_collection
     CONNECTION LIMIT = -1
     IS_TEMPLATE = False;
 
+-- Creates table called User_Data with 3 variables
+-- will have user email and password
 CREATE TABLE "User_Data" (
     id SERIAL PRIMARY KEY,
     email VARCHAR(255) UNIQUE NOT NULL,
     password VARCHAR(255) NOT NULL
 );
 
+--Creates table called Collection with 5 variables
+-- will have all the user's cards with the card is, name, and image 
 CREATE TABLE "Collection" (
     id SERIAL PRIMARY KEY,
     user_id INT REFERENCES "User_Data"(id) ON DELETE CASCADE,
